@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".ui.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_main"
+        app:title="Menu Roti"
+        app:titleTextColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bakery"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/btn_buy"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:spanCount="2"
+        tools:listitem="@layout/item_bakery" />
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="BELI"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

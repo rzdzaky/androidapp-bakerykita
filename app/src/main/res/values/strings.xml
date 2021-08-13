@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Bakery Kita</string>
+    <string name="wrong_auth_text">Username atau password salah.</string>
+</resources>
